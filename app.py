@@ -57,7 +57,7 @@ for e in range(epochs):
     running_loss = 0
     for images, labels in trainloader:
         images, labels = images.to(cuda0), labels.to(cuda0)
-        
+
         images = images.view(images.shape[0], -1)
         optimizer.zero_grad()
 
