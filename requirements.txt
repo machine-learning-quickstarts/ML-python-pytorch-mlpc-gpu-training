@@ -1,6 +1,6 @@
 #Fill in dependencies here
-torch==1.0.1.post2
+torch==1.1.0
 torchvision==0.2.1
 future==0.17.1
-onnx==1.4.1
+onnx==1.5.0
 protobuf==3.7.1
