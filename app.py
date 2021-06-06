@@ -22,6 +22,14 @@ cuda0 = torch.device('cuda')
 target_loss = 0.26
 target_accuracy = 90
 
+# Datasets have moved. Need this until torchvision 0.9.1.
+datasets.MNIST.urls = [
+    'https://ossci-datasets.s3.amazonaws.com/mnist/train-images-idx3-ubyte.gz',
+    'https://ossci-datasets.s3.amazonaws.com/mnist/train-labels-idx1-ubyte.gz',
+    'https://ossci-datasets.s3.amazonaws.com/mnist/t10k-images-idx3-ubyte.gz',
+    'https://ossci-datasets.s3.amazonaws.com/mnist/t10k-labels-idx1-ubyte.gz',
+]
+
 # Step 2: Perform training for model
 # Define a transform to normalize the data
 transform = transforms.Compose([transforms.ToTensor(),
